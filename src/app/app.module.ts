@@ -9,7 +9,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import {HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http/src/client';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClient,
+    HttpClientModule
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
